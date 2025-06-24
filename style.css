@@ -220,7 +220,7 @@ body, html {
 
     .selfcare-wrapper {
       margin-top: 50px;
-      background: url('/assets/images/bgs.png') no-repeat center top;
+      background: url('assets/images/bgs.png') no-repeat center top;
       background-size: cover;
       padding: 120px 20px 80px;
       color: #333;
@@ -671,7 +671,7 @@ body, html {
 .faq-section {
   background-color: #f7fafd;
   font-family: 'Poppins', sans-serif;
-  background: url('/assets/images/Vector\ 10.png') no-repeat center top;
+  background: url('assets/images/Vector\ 10.png') no-repeat center top;
 }
 
 .faq-search {
