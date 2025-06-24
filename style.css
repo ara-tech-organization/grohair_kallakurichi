@@ -4,7 +4,7 @@ body, html {
   height: 100%;
   width: 100%;
   font-family: 'Poppins', sans-serif;
-    padding-top: 40px;
+ padding-top: 59px;
 }
 
 .hero-section {
@@ -57,6 +57,53 @@ body, html {
   position: relative;
   overflow: hidden;
 }
+.top-header {
+  background-color: #ffe0db;
+  font-size: 0.9rem;
+  color: #6c757d;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 0;      /* ✅ smaller padding for tighter look */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  margin: 0;           /* ✅ no margin */
+}
+.top-header i {
+  color: #EA2127;            /* muted grey by default */
+  margin-right: 5px;
+  transition: color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+
+
+.top-header a:hover i {
+  color: #dc3545;            /* red on hover */
+}
+
+
+.navbar.fixed-top {
+  top: calc(10px * 2 + 1px + 0.9rem);  /* ✅ matches the top-header’s height calculation */
+  margin: 0;          /* ✅ no margin */
+  z-index: 1040;
+}
+
+.top-header a {
+  color: #EA2127 !important;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.top-header a:hover {
+  color: #dc3545; /* Red on hover */
+}
+
+.top-header i {
+  margin-right: 5px;
+}
+
 .navbar {
   z-index: 1030; /* stays above other content */
 }
@@ -123,12 +170,17 @@ body, html {
   font-weight: 500;
 }
 
-.header-nav .btn-outline-dark:hover {
+.btn-outline-dark:hover {
+  background-color: #EA2127;
+  border-color: #EA2127;
+  color: #fff;
+  transform: scale(1.05);    /* Slight zoom effect */
+}
+.btn-outline-dark {
   border-color: #EA2127;
   color: #EA2127;
-  font-weight: 500;
+  transition: all 0.3s ease;
 }
-
 .navbar-brand {
   color: #EA2127 !important;
   font-weight: 700;
@@ -141,29 +193,64 @@ body, html {
 /* <576px - Mobile Phones */
 @media (max-width: 575.98px) {
   .hero-section {
+    display: flex;
     flex-direction: column;
+     height: auto;
   }
+
+  .navbar.fixed-top {
+    top: 0;
+  }
+.top-header {
+  display: none;
+}
   .hero-left {
-    padding: 30px 15px;
+    padding: 70px 15px;
     text-align: center;
+
   }
+
   .hero-left h1 {
     font-size: 1.8rem;
   }
+
   .hero-left p {
     font-size: 1rem;
   }
+
   .hero-left .btn {
     width: 100%;
     margin-bottom: 10px;
   }
+
   .hero-right {
-    height: 250px;
+    width: 100%;
+    height: 100vh; /* ✅ Fills full viewport height on mobile */
+    overflow: hidden;
+    position: relative;
+  }
+
+  .hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ✅ This is the king here → fills perfectly without distortion */
+    display: block;
   }
 }
 
+
+
 /* 576px - 767.98px (Small Devices - Large Phones / Small Tablets) */
 @media (min-width: 576px) and (max-width: 767.98px) {
+    .hero-section {
+    display: flex;
+    flex-direction: column;
+     height: auto;
+  }
+
+  .navbar.fixed-top {
+    top: 0;
+  }
   .hero-section {
     flex-direction: column;
   }
@@ -1020,14 +1107,14 @@ body, html {
 }
 .decorative-leaf {
   position: absolute;
-  top: 0;
+  bottom: 500px;
   right: -20px;
   width: 80px;
 }
 
 .decorative-leafs {
   position: absolute;
-  top: 100px;
+  top: 150px;
   left: 20px;
   width: 80px;
 }
