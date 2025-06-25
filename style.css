@@ -1,3 +1,8 @@
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ec2024 #f1f1f1;
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -6,6 +11,29 @@ body, html {
   font-family: 'Poppins', sans-serif;
  padding-top: 59px;
  overflow-x: hidden;
+}
+/* Whole scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track (the background) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* light gray or anything neutral */
+  border-radius: 10px;
+}
+
+/* Thumb (the handle) */
+::-webkit-scrollbar-thumb {
+  background: #ec2024; /* your brand red */
+  border-radius: 10px;
+  border: 2px solid #f1f1f1; /* optional for inner spacing effect */
+}
+
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: #ba0c1d; /* darker red on hover */
 }
 
 .hero-section {
@@ -890,6 +918,30 @@ body, html {
 .grofooter-link:hover {
   color: #e53935;
 }
+
+.grofooter-bottom {
+  background-color: #ec2024;
+  color: #fff;
+  text-align: center;
+  padding: 10px 10px;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.grofooter-bottom p{
+  margin-bottom: 0;
+}
+
+.grofooter-bottom a.ara-link {
+  color: #fff; /* or your brand red */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.grofooter-bottom a.ara-link:hover {
+  text-decoration: underline;
+}
+
 
 
 @media (max-width: 576px) {
