@@ -61,7 +61,7 @@ body, html {
 .top-header {
   background-color: #ffe0db;
   font-size: 0.9rem;
-  color: #6c757d;
+  color: #000;
   border-bottom: 1px solid #e0e0e0;
   padding: 10px 0;      /* ✅ smaller padding for tighter look */
   position: fixed;
@@ -92,7 +92,7 @@ body, html {
 }
 
 .top-header a {
-  color: #EA2127 !important;
+  color: #000 ;
   transition: color 0.3s;
   text-decoration: none;
 }
