@@ -18,6 +18,22 @@ body, html {
   height: 10px;
 }
 
+/* For most modern browsers */
+input[type="date"] {
+  color: #333; /* or any visible color */
+}
+
+/* For mobile Safari and older Android WebViews */
+input[type="date"]::-webkit-datetime-edit {
+  color: #333;
+}
+
+/* Optional: placeholder color (though not shown by default on type="date") */
+input[type="date"]::placeholder {
+  color: #999; /* fallback if placeholder ever shows */
+}
+
+
 /* Track (the background) */
 ::-webkit-scrollbar-track {
   background: #f1f1f1; /* light gray or anything neutral */
